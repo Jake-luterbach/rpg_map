@@ -7,7 +7,7 @@ wild_lands_map:{[Saloon: "Saloon"],
 
 try:
   Player={xloc = 0 , yloc = 0}
-  Texas={"saloon":{"A Saloon in Texas":
+  map_rooms={"saloon":{"A Saloon in Texas":
                    "an saloon normal for its time, three drunk men sit at the bar"
                    "options":[left,up,down,right]}}
   Playerloc=(wild_lands_map[yloc][xloc])
