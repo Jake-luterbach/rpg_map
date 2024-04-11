@@ -1,8 +1,8 @@
-wild_lands_map = [["Saloon", "Town_street", "Campsite", "Wildlands", "Heart_lands"],
-["Town_street", "Saloon", "Wildlands","Campsite", "Heart_lands"],
-["Campsite", "Wildands", "Town_street", "Saloon", "Heart_lands"],
-["Wildlands", "Heart_lands","Town_street", "Saloon","Campsite"],
-["Heart_lands", "Wildlands", "Campsite","Town_street","Saloon"]]
+import map
+
+wild_lands_map = [["Saloon", "Town_street", "Wildlands", "Heart_lands"],
+["Town_street", "Wildlands","Campsite", "Heart_lands"],
+["saloon", "townstreet", "campsite", "Wildlands"]]
 
 Player={"xloc": 0, "yloc": 0}
 map_tiles={"Saloon":{"title": "A Saloon in Texas.",
@@ -29,7 +29,7 @@ while True:
   def Mapping():
     global Player
     try:
-      
+      map.write()
       move = input("what direction? ").capitalize()
       if move == "Right":
        Player["xloc"] += 1
@@ -39,10 +39,12 @@ while True:
         Player["yloc"] += 1
       elif move == "Down":
         Player["yloc"] -= 1
+      elif move == "map":
+        map.read()
       else:
         print("Error")
       Playerloc = (wild_lands_map[Player["xloc"]][Player["yloc"]]) 
       print(map_tiles[Playerloc]["description"])
     except Exception:
-        print("Error")
+      print("Error")
   Mapping()
