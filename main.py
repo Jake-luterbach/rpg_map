@@ -29,7 +29,6 @@ while True:
   def Mapping():
     global Player
     try:
-      map.write()
       move = input("what direction? ").capitalize()
       if move == "Right":
        Player["xloc"] += 1
@@ -39,12 +38,14 @@ while True:
         Player["yloc"] += 1
       elif move == "Down":
         Player["yloc"] -= 1
-      elif move == "map":
+      elif move == "Map":
+        map.write()
         map.read()
       else:
         print("Error")
       Playerloc = (wild_lands_map[Player["xloc"]][Player["yloc"]]) 
-      print(map_tiles[Playerloc]["description"])
+      if move == "Right" or "Left" or "Up" or "Down":
+        print(map_tiles[Playerloc]["description"])
     except Exception:
       print("Error")
   Mapping()
