@@ -22,7 +22,7 @@ map_tiles={"Saloon":{"title": "A Saloon in Texas.",
                           "description": "filled with the most wild of " + "beasts",
                           "options":["left","up","down","right"]}
           }
-
+  
            
 Movement={"walk", "run", "horseback"}
 while True:
@@ -49,3 +49,4 @@ while True:
     except Exception:
       print("Error")
   Mapping()
+
