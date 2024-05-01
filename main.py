@@ -23,7 +23,41 @@ map_tiles={"Saloon":{"title": "A Saloon in Texas.",
                           "options":["left","up","down","right"]}
           }
   
-           
+
+inventory =[]
+
+items= {"Revolver": {"description": "you have found a used revolver", 
+"status": "lost", 
+"Location": [1,1],
+"actions": "Take","leave"
+"requirment": "none"},
+"key":{"description": "a Old rusty key you found",
+"status": "lost",
+"Location": [3,2],
+"action": "take","leave"
+"Requirment": "None"},
+"chest":{"description":"an old wooden chest",
+"Status":"hidden",
+"Location":[4,3],
+"actions": "Open", "leave"
+"Requirment": "key"}
+}
+def View_inventory():
+  if inventory:
+    print(f"inventory")
+    for item in inventory:
+      print (f"- {item}")
+    else:
+      print("your Inventory is empty")
+
+def inspect():
+  
+
+def Revolver_actions():
+  #something
+  
+    
+
 Movement={"walk", "run", "horseback"}
 while True:
   def Mapping():
